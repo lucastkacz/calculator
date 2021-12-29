@@ -1,0 +1,128 @@
+:root {
+  --main-bg-color: gold;
+  --border: #333;
+}
+
+* {
+  background-color: #f6f6f6;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  /* footer support */
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 75%;
+  width: auto;
+  margin-bottom: 100px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+}
+.calculator {
+  width: 400px;
+  display: grid;
+  gap: 5px;
+  padding: 20px;
+  background-color: var(--main-bg-color);
+  height: 100%;
+  border-radius: 20px;
+  border: 2px var(--border) solid;
+}
+.button-especial {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 5px;
+  background-color: var(--main-bg-color);
+  margin-bottom: 20px;
+}
+.button-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 5px;
+  background-color: var(--main-bg-color);
+}
+#footer-logo {
+  width: 2em;
+  height: auto;
+  margin-left: 1em;
+}
+#footer-logo:hover {
+  transition-duration: 0.75s;
+  transform: rotate(720deg) scale(1.3);
+}
+#clear {
+  background-color: hotpink;
+}
+#delete {
+  background-color: cornflowerblue;
+}
+.btn {
+  max-width: 100%;
+  height: 80px;
+  border-radius: 10px;
+  font-size: 25px;
+  border: 2px var(--border) solid;
+}
+.display {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 100px;
+  padding: 5px 10px 5px 10px;
+  text-align: right;
+  word-wrap: break-word;
+  word-break: break-all;
+  border-radius: 10px;
+  border: 2px var(--border) solid;
+  margin-bottom: 20px;
+  max-height: 140px;
+  gap: 10px;
+}
+.display-top {
+  min-height: 35%;
+  font-size: 22px;
+  overflow-y: scroll;
+  color: grey;
+}
+.display-bottom {
+  min-height: 65%;
+  font-size: 40px;
+  overflow-y: scroll;
+}
+.btn-especial {
+  font-size: 25px;
+}
+.btn:hover {
+  background-color: rgb(222, 222, 222);
+}
+#clear:hover {
+  background-color: rgb(220, 92, 156);
+}
+#delete:hover {
+  background-color: rgb(84, 125, 200);
+}
+#clear:active {
+  background-color: rgb(174, 73, 124);
+}
+#delete:active {
+  background-color: rgb(58, 86, 138);
+}
